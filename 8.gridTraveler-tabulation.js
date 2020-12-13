@@ -7,8 +7,8 @@ const gridTraveller = (m,n)=>{
     for(let i=0 ;i<=m;i++)
         for(let j=0;j<=n;j++){
             const current = table[i][j]
-            if(j+1 <=n) table[i][j+1] +=current
-            if(i+1 <=m) table[i+1][j] +=current
+            if(i+1 <=m) table[i+1][j] +=current // moves right and add the current value
+            if(j+1 <=n) table[i][j+1] +=current // moves down and add the current value
 
         }
     return table[m][n]
